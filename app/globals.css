@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 120 20% 96%;
+  --foreground: 145 22% 12%;
+  --primary: 140 55% 32%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 45 90% 48%;
+  --secondary-foreground: 30 20% 10%;
+  --accent: 140 40% 25%;
+  --accent-foreground: 0 0% 98%;
+  --muted: 120 15% 90%;
+  --muted-foreground: 145 10% 35%;
+  --card: 0 0% 100%;
+  --card-foreground: 145 22% 12%;
+  --border: 145 18% 82%;
+  --ring: 140 60% 40%;
+  --radius: 12px;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+* {
+  @apply border-border;
+}
+
+a {
+  @apply text-primary hover:text-accent underline-offset-4;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+}
